@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Narrator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Text-to-Speech Narrator</h1>
+            <p>Paste your text below and click the narrate button to listen.</p>
+        </header>
+
+        <section class="text-input-section">
+            <textarea id="text-to-speak" placeholder="Paste your text here..." aria-label="Text to be narrated"></textarea>
+        </section>
+
+        <section class="controls-section">
+            <div class="voice-selection">
+                <label for="voice-select">Choose a voice:</label>
+                <select id="voice-select" aria-label="Select a voice"></select>
+            </div>
+
+            <div class="speech-settings">
+                <div class="slider-control">
+                    <label for="rate">Rate: <span id="rate-value">1</span></label>
+                    <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1" aria-label="Speech rate">
+                </div>
+                <div class="slider-control">
+                    <label for="pitch">Pitch: <span id="pitch-value">1</span></label>
+                    <input type="range" id="pitch" min="0" max="2" value="1" step="0.1" aria-label="Speech pitch">
+                </div>
+                <div class="slider-control">
+                    <label for="volume">Volume: <span id="volume-value">1</span></label>
+                    <input type="range" id="volume" min="0" max="1" value="1" step="0.1" aria-label="Speech volume">
+                </div>
+            </div>
+
+            <button id="narrate-button" aria-label="Narrate the text">Narrate</button>
+        </section>
+        
+    </main>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
